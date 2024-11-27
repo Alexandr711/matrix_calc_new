@@ -1,12 +1,14 @@
 #include <iostream>
-#include <memory>
+#include <vector>
 
 class Matrix
 {
   public:
   Matrix(int, int);
   Matrix();
+  Matrix(const Matrix&);
   ~Matrix();
+
 
   createMatrix(int,int);
   matrixMulNumber(long double);
@@ -15,7 +17,7 @@ class Matrix
   Matrix operator+(Matrix);
   Matrix operator-(Matrix);
   Matrix operator*(Matrix);
-  
+  Matrix operator=(Matrix);
 
   private:
   int numberStr;
