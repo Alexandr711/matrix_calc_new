@@ -18,6 +18,20 @@ Matrix::Matrix(int str, int cols): numberString(str), numberCols(cols)
     }
 }
 
+//Конструктор копирования
+Matrix::Matrix(const Matrix &op)
+{
+  numberStr = op.numberStr;
+  numberCols = op.numberCols;
+  for(int i = 0; i < numberStr; ++i)
+    {
+      for(int j = 0; j < numberCols; ++j)
+        {
+          matrix[i][j] = op.matrix[i][j];
+        }
+    }
+}
+
 Matrix Matrix::operator+(Matrix matrixOne)
 {
   Matrix tempMatrix(numberStr, numberCols);
@@ -42,6 +56,25 @@ Matrix Matrix::operator-(Matrix matrixOne)
         }
     }
   return tempMatrix;
+}
+
+Matrix Matrix::operator=(Matrix op)
+{
+  numberStr = op.numberStr;
+  numberCols = op.numberStr;
+  for(int i = 0; i < numberStr; ++i)
+    {
+      for(int j = 0; numberCols; ++j)
+        {
+          matrix[i][j] = op.matrix[i][j];
+        }
+    }
+  return *this;
+}
+
+Matrix Matrix::operator*(Matrix op)
+{
+  
 }
 
 
