@@ -12,9 +12,9 @@ class Matrix
   matrixMulNumber(long double);
   matrixDivNumber(long double);
   determinate();
-  matrix operator+(matrix);
-  matrix operator-(matrix);
-  matrix operator*(matrix);
+  Matrix operator+(Matrix);
+  Matrix operator-(Matrix);
+  Matrix operator*(Matrix);
   
 
   private:
