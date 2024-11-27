@@ -4,10 +4,16 @@ Matrix::Matrix()
 {
   numberString = 0;
   numberCols = 0;
-  matrix = nullptr;
+  matrix{};
 }
 
 Matrix::Matrix(int str, int cols): numberString(str), numberCols(cols)
 {
-  matrix = 
+  for(int i = 0; i < str; ++i)
+    {
+      for(int j = 0; j < cols; ++j)
+        {
+          matrix[i][j] = 0;
+        }
+    }
 }
