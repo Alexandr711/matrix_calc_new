@@ -11,5 +11,5 @@ class Matrix
   private:
   int numberStr;
   int numberCols;
-  shared_ptr<long double[][]> matrix;
+  std::vector<std::vector<long double>> matrix;
 }
