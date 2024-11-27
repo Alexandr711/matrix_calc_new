@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 class Matrix
 {
@@ -10,4 +11,5 @@ class Matrix
   private:
   int numberStr;
   int numberCols;
+  shared_ptr<long double[][]> matrix;
 }
