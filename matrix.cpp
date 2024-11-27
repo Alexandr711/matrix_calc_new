@@ -74,7 +74,8 @@ Matrix Matrix::operator=(Matrix op)
 
 Matrix Matrix::operator*(Matrix op)
 {
-  
+  Matrix result;
+  result.numberStr = 
 }
 
 
