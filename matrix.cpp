@@ -72,10 +72,42 @@ Matrix Matrix::operator=(Matrix op)
   return *this;
 }
 
+//операция перемножения матриц
 Matrix Matrix::operator*(Matrix op)
 {
   Matrix result;
-  result.numberStr = 
+  result.numberStr = numberStr;
+  result.numberCols = op.numberCols;
+  
+}
+
+//создание и заполнение матрицы числами
+void Matrix::createMatrix(int str, int cols)
+{}
+
+//умножение матрицы на число
+void Matrix::matrixMulNumber(long double number)
+{
+  for(int i = 0; i < str; ++i)
+    {
+      for(int j = 0; j < cols; ++j)
+        {
+          matrix[i][j] *= number;
+        }
+    }
+}
+
+//деление матрицы на число
+
+void Matrix::matrixMulNumber(long double number)
+{
+  for(int i = 0; i < str; ++i)
+    {
+      for(int j = 0; j < cols; ++j)
+        {
+          matrix[i][j] = matrix[i][j]/number;
+        }
+    }
 }
 
 
