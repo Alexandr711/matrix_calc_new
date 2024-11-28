@@ -22,5 +22,5 @@ class Matrix
   private:
   int numberStr;
   int numberCols;
-  std::vector<std::vector<long double>> matrix;
+  std::vector<std::vector<long double>> matrix(numberStr, std::vector<long double>(numberCols));
 }
