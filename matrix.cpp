@@ -75,10 +75,18 @@ Matrix Matrix::operator=(Matrix op)
 //операция перемножения матриц
 Matrix Matrix::operator*(Matrix op)
 {
-  Matrix result;
-  result.numberStr = numberStr;
-  result.numberCols = op.numberCols;
-  
+  Matrix result(numberStr, op.numberCols);
+  for(int i = 0; i < result.numberStr; ++i)
+    {
+      for(int j = 0; j < result.numberCols; ++j)
+        {
+          for(int k = 0; k < result.numberCols; ++k)
+            {
+              result.matrix[i][j] += matrix[i][k] * op.matrix[k][j];
+            }
+        }
+    }
+  return result;
 }
 
 //создание и заполнение матрицы числами
