@@ -10,10 +10,10 @@ class Matrix
   ~Matrix();
 
 
-  createMatrix(int,int);
-  matrixMulNumber(long double);
-  matrixDivNumber(long double);
-  determinate();
+  void createMatrix(int,int);
+  void matrixMulNumber(long double);
+  void matrixDivNumber(long double);
+  long double determinate();
   Matrix operator+(Matrix);
   Matrix operator-(Matrix);
   Matrix operator*(Matrix);
