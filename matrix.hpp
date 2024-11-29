@@ -18,6 +18,7 @@ class Matrix
   Matrix operator-(Matrix);
   Matrix operator*(Matrix);
   Matrix operator=(Matrix);
+  istream &operator>>(istream&, Matrix&);
 
   private:
   int numberStr;
