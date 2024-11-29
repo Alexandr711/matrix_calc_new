@@ -9,13 +9,7 @@ Matrix::Matrix()
 
 Matrix::Matrix(int str, int cols): numberString(str), numberCols(cols)
 {
-  for(int i = 0; i < str; ++i)
-    {
-      for(int j = 0; j < cols; ++j)
-        {
-          matrix[i][j] = 0;
-        }
-    }
+  matrix.assign(numberString, std::vector<long double>(numberCols));
 }
 
 //Конструктор копирования
@@ -23,6 +17,7 @@ Matrix::Matrix(const Matrix &op)
 {
   numberStr = op.numberStr;
   numberCols = op.numberCols;
+  matrix.resize(numberStr, std::vector<long double>(numberCols));
   for(int i = 0; i < numberStr; ++i)
     {
       for(int j = 0; j < numberCols; ++j)
