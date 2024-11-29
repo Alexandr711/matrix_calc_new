@@ -27,6 +27,9 @@ Matrix::Matrix(const Matrix &op)
     }
 }
 
+//перегрузка операторов
+//----------------------------------------------------------------------
+
 Matrix Matrix::operator+(Matrix matrixOne)
 {
   Matrix tempMatrix(numberStr, numberCols);
@@ -83,6 +86,24 @@ Matrix Matrix::operator*(Matrix op)
     }
   return result;
 }
+
+//перегрузка операторов ввода вывода
+
+istream &operator>>(istream &stream, Matrix op)
+{
+  stream >> op.numberStr;
+  stream >> op.numberCols;
+  for(int i = 0; i < op.numberStr; ++i)
+    {
+      for(int j = 0; j < op.numberCols; ++j)
+        {
+          stream >> op.matrix[i][j];
+        }
+    }
+  return stream;
+}
+
+//-------------------------------------------------------------------------
 
 //создание и заполнение матрицы числами
 void Matrix::createMatrix(int str, int cols)
