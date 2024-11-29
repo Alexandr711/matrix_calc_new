@@ -107,7 +107,9 @@ istream &operator>>(istream &stream, Matrix op)
 
 //создание и заполнение матрицы числами
 void Matrix::createMatrix(int str, int cols)
-{}
+{
+  
+}
 
 //умножение матрицы на число
 void Matrix::matrixMulNumber(long double number)
